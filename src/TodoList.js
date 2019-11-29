@@ -11,7 +11,8 @@ function TodoList({todos, removeTodo, updateTodo, editTodo}) {
         <List>
             {todos.map((todo, i) => (
                 <>
-                    <Todo completed={todo.completed} title={todo.title} key={todo.id} id={todo.id} removeTodo={removeTodo} updateTodo={updateTodo} editTodo={editTodo} />
+                    {/* {...todo} like completed={todo.completed} title={todo.title}  id={todo.id}  */}
+                    <Todo {...todo}  key={todo.id}removeTodo={removeTodo} updateTodo={updateTodo} editTodo={editTodo} />
                     {i < todos.length-1 && <Divider/>}
                 </>))}
         </List>
