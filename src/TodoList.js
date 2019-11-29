@@ -9,10 +9,10 @@ function TodoList({todos, removeTodo, updateTodo, editTodo}) {
     return (
         <Paper>
         <List>
-            {todos.map((todo) => (
+            {todos.map((todo, i) => (
                 <>
                     <Todo completed={todo.completed} title={todo.title} key={todo.id} id={todo.id} removeTodo={removeTodo} updateTodo={updateTodo} editTodo={editTodo} />
-                    <Divider/>
+                    {i < todos.length-1 && <Divider/>}
                 </>))}
         </List>
         </Paper>
